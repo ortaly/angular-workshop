@@ -1,0 +1,997 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sear",
+				"searches"
+			],
+			[
+				"lik",
+				"likeCountDisplay"
+			],
+			[
+				"on",
+				"onClick"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 94,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "final/index.html",
+			"settings":
+			{
+				"buffer_size": 4765,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "final/js/start.js",
+			"settings":
+			{
+				"buffer_size": 99,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "final/js/echoes.js",
+			"settings":
+			{
+				"buffer_size": 148,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"start",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pac lis",
+				"Package Control: List Packages"
+			],
+			[
+				"pac remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"paclis",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"server",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"pac ins",
+				"Package Control: Install Package"
+			],
+			[
+				"stop",
+				"SublimeServer: Stop SublimeServer"
+			],
+			[
+				"star",
+				"SublimeServer: Start SublimeServer"
+			],
+			[
+				"key bindin",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"keyb",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"noderun",
+				"Nodejs::Run::Current File"
+			],
+			[
+				"nodeup",
+				"Nodejs::NPM::Update"
+			],
+			[
+				"pac in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac disc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"keys",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"forma",
+				"Format: Javascript"
+			],
+			[
+				"resta",
+				"SublimeServer: Restart SublimeServer"
+			],
+			[
+				"restar",
+				"SublimeServer: Restart SublimeServer"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/farhioren/Documents/Github/angular-workshop/final/test/mock_data.js",
+		"/Users/farhioren/Documents/Github/angular-workshop/final/js/echoes.js",
+		"/Users/farhioren/Documents/Github/angular-workshop/final/js/create.js",
+		"/Users/farhioren/Documents/Github/angular-workshop/final/js/start.js",
+		"/Users/farhioren/Documents/Github/angular-workshop/final/favicon.ico",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/index.html",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/models/youtube_search_result_item.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/yours.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/views/youtube_search_results.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/views/youtube_search_result_item.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/models/youtube_media_provider.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/views/media_search.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/routers/player.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/test/mock_data.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/routers/player.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/models/youtube_media_provider.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/media_search.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/youtube_search_results.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/echoes.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/templates/templates.html",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/youtube_search_result_item.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/js/libs/backbone.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/yours/css/style.css",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/css/style.css",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/templates/templates.html",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/echoes.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/youtube_player_api.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/playlist.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/app.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/models/youtube_search_result_item.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/playlist_item.js",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/views/youtube_player.js",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/Modific/Default (OSX).sublime-keymap",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/collections/youtube_search_results.js",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/User/SublimeServer.sublime-settings",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/libs/underscore.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/js/libs/jquery.min.js",
+		"/Users/farhioren/Documents/Github/backbone-workshop/final/index.html",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/index.html",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/js/echoes.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/js/views/app.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/views/app.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/bu/echoes.js",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/models/youtube_media_provider.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/routers/player.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/models/media_search.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/views/media_search.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/index.html",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/yours.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/views/youtube_search_results.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/models/youtube_search_result_item.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/test/mock_data.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/views/youtube_search_result_item.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/collections/youtube_search_results.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/templates/templates.html",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/start.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/libs/backbone.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/libs/underscore.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/src/js/create.js",
+		"/Users/farhioren/Documents/Github/GDG-Backbone-101/README.md",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/farhioren/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"YOUR_APP_NAME",
+			"/path/to",
+			"examparra",
+			"modules",
+			"86",
+			"renderItem",
+			"next_view",
+			"this.model.on('change",
+			"		\n",
+			"delete",
+			"playedMedia",
+			"mimeTypes",
+			"super+d",
+			"mimeTypes",
+			"move",
+			"head",
+			"delete_",
+			"swap",
+			"shift",
+			"sync",
+			"_configure",
+			"bold"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 94,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "final/index.html",
+					"settings":
+					{
+						"buffer_size": 4765,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								644,
+								644
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "final/js/start.js",
+					"settings":
+					{
+						"buffer_size": 99,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99,
+								50
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "final/js/echoes.js",
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								75,
+								75
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": false,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 184.0
+	},
+	"output.vcs":
+	{
+		"height": 130.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"crea",
+				"final/js/create.js"
+			],
+			[
+				"start",
+				"final/js/start.js"
+			],
+			[
+				"provid",
+				"yours/js/models/youtube_media_provider.js"
+			],
+			[
+				"router",
+				"yours/js/routers/player.js"
+			],
+			[
+				"yoursviewmed",
+				"yours/js/views/media_search.js"
+			],
+			[
+				"yourviewsitem",
+				"yours/js/views/youtube_search_result_item.js"
+			],
+			[
+				"youviewite",
+				"yours/js/views/youtube_search_result_item.js"
+			],
+			[
+				"youmodelyouit",
+				"yours/js/models/youtube_search_result_item.js"
+			],
+			[
+				"youtseres",
+				"yours/js/models/youtube_search_result_item.js"
+			],
+			[
+				"viewyousea",
+				"yours/js/views/youtube_search_results.js"
+			],
+			[
+				"temp",
+				"yours/templates/templates.html"
+			],
+			[
+				"youtitem",
+				"final/js/views/youtube_search_result_item.js"
+			],
+			[
+				"echoe",
+				"yours/js/echoes.js"
+			],
+			[
+				"mock",
+				"yours/test/mock_data.js"
+			],
+			[
+				"templa",
+				"yours/templates/templates.html"
+			],
+			[
+				"back",
+				"yours/js/libs/backbone.js"
+			],
+			[
+				"indeht",
+				"yours/index.html"
+			],
+			[
+				"inde",
+				"yours/index.html"
+			],
+			[
+				"yours",
+				"yours/js/yours.js"
+			],
+			[
+				"youtemp",
+				"yours/templates/templates.html"
+			],
+			[
+				"sty",
+				"yours/css/style.css"
+			],
+			[
+				"youit",
+				"final/js/views/youtube_search_result_item.js"
+			],
+			[
+				"styl",
+				"final/css/style.css"
+			],
+			[
+				"ech",
+				"final/js/echoes.js"
+			],
+			[
+				"youpla",
+				"final/js/views/youtube_player.js"
+			],
+			[
+				"viewyousearesult",
+				"final/js/views/youtube_search_result_item.js"
+			],
+			[
+				"viewyoutubsere",
+				"final/js/views/youtube_search_results.js"
+			],
+			[
+				"player",
+				"final/js/routers/player.js"
+			],
+			[
+				"index",
+				"final/index.html"
+			],
+			[
+				"app",
+				"js/views/app.js"
+			],
+			[
+				"meid",
+				"src/js/models/youtube_media_provider.js"
+			],
+			[
+				"modelmed",
+				"src/js/models/media_search.js"
+			],
+			[
+				"test",
+				"src/test/mock_data.js"
+			],
+			[
+				"collec",
+				"src/js/collections/youtube_search_results.js"
+			],
+			[
+				"medipr",
+				"src/js/models/youtube_media_provider.js"
+			],
+			[
+				"bac",
+				"src/js/libs/backbone.js"
+			],
+			[
+				"yout",
+				"src/js/models/youtube_search_result_item.js"
+			],
+			[
+				"youtubite",
+				"src/js/views/youtube_search_result_item.js"
+			],
+			[
+				"undersco",
+				"src/js/libs/underscore.js"
+			],
+			[
+				"template",
+				"src/templates/templates.html"
+			],
+			[
+				"cre",
+				"src/js/create.js"
+			],
+			[
+				"star",
+				"src/js/start.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"workshop",
+				"/Users/farhioren/Documents/Github/backbone-workshop/backbone-workshop.sublime-project"
+			],
+			[
+				"",
+				"/Users/farhioren/Documents/Github/GDG-Backbone-101/GDG-Backbone-101.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true
+}
