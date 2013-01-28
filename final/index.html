@@ -24,7 +24,7 @@
 	<script type="text/javascript" src="js/libs/angular.js"></script>
 	<script type="text/javascript" src="js/libs/angular-resource.js"></script>
 </head>
-<body ng-controller="EchoesCtrl">
+<body>
 
 		<!-- TOP NAVIGATION BAR -->
 		<div class="navbar navbar-inverse navbar-fixed-top">
@@ -60,11 +60,11 @@
 		</div>
 
 		<!-- YOUTUBE PLAYER -->
-		<div id="youtube-player-container" class="youtube-player ux-maker">
+		<div ng-controller="YoutubePlayerCtrl" id="youtube-player-container" class="youtube-player ux-maker {{ playerVisibility }}">
 			<div id="player" class="ytplayer" style="width: 350px; height: 270px;"></div>
 			<div class="controls">
-				<a href="#hide-media" class="hide-player" title="Hide Video"><i class="icon-arrow-up icon-white"></i></a>
-				<a href="#show-player" class="show-player" title="Show Video"><i class="icon-arrow-down icon-white"></i></a>
+				<a ng-click="hidePlayer()" href="#hide-media" class="hide-player" title="Hide Video"><i class="icon-arrow-up icon-white"></i></a>
+				<a ng-click="showPlayer()" href="#show-player" class="show-player" title="Show Video"><i class="icon-arrow-down icon-white"></i></a>
 			</div>
 		</div>
 
@@ -90,7 +90,7 @@
 		</div>
 
 		<!-- MAIN CONTENT -->
-		<div class="container-fluid container-main">
+		<div ng-controller="EchoesCtrl" class="container-fluid container-main">
 			<div class="row-fluid">
 				
 				<div class="span12">
@@ -141,6 +141,7 @@
 <!-- NAMESPACE DEFINITION -->
 <script src="js/echoes.js"></script>
 <script src="js/controllers/EchoesCtrl.js"></script>
+<script src="js/controllers/YoutubePlayerCtrl.js"></script>
 
 <!-- MODELS -->
 <!-- <script src="js/models/media_search.js"></script>
