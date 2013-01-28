@@ -15,16 +15,16 @@
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 
 	<style>[ng-cloak] {display: none}</style>
-	
+
 	<!-- CUSTOM STYLES -->
 	<link rel="stylesheet" href="css/style.css">
 
 	<script type="text/javascript" src="test/mock_data.js"></script>
 	<!-- ANGULAR RESOURCES -->
-	<script type="text/javascript" src="js/libs/angular/angular.js"></script>
-	<script type="text/javascript" src="js/libs/angular/angular-resource.js"></script>
+	<script type="text/javascript" src="js/libs/angular.js"></script>
+	<script type="text/javascript" src="js/libs/angular-resource.js"></script>
 </head>
-<body>
+<body ng-controller="EchoesCtrl">
 
 		<!-- TOP NAVIGATION BAR -->
 		<div class="navbar navbar-inverse navbar-fixed-top">
@@ -44,8 +44,8 @@
 						</ul>
 
 						<!-- SEARCH FORM -->
-						<form class="form-search pull-left" id="media-explorer">
-							<input placeholder="Explore My Media" id="media-search" type="search" class="input-medium search-query span4">
+						<form ng-submit="queryProvider()" class="form-search pull-left" id="media-explorer">
+							<input ng-model="query" placeholder="Explore My Media" id="media-search" type="search" class="input-medium search-query span4">
 						</form>
 						
 						<!-- SEARCH NAVIGATION -->
@@ -95,12 +95,28 @@
 				
 				<div class="span12">
 
-					<div class="records" data-ng-repeat="record in records | orderBy:title">
-					  <h5> {{ record.title }} </h5>
-					</div>
-
 					<!-- SEARCH RESULTS AREA -->
-					<ul id="searchResults" class="clearfix unstyled"></ul>
+					<ul id="searchResults" class="clearfix unstyled">
+						
+						<li class="well youtube-item span3 nicer-ux" ng-repeat="media in youtubeResults">
+
+							<span class="twipsy badge badge-warning" rel="tooltip" title="likes">{{ media.likeCount }}</span>
+							<a href='#play/{{ media.id }}' rel="tooltip" title="{{ media.title }}">
+								<h4 class="title span11">{{ media.title }}</h4>
+								<div class="thumbnail">
+								  <img src="{{ media.thumbnail.hqDefault }}" alt="">
+								</div>
+							</a>
+							<button class="btn btn-info btn-mini media-desc" type="button"><i class="icon-chevron-up icon-white"></i>Description</button>
+							<button class="btn btn-info btn-mini add-to-playlist pull-right" type="button" title="add to now playlist"><i class="icon-plus-sign icon-white"></i></button>
+							<p class="description">
+								{{ media.description }}<br>
+								Uploaded by {{ media.uploader }} on {{ media.uploaded }}
+							</p>
+
+						</li>
+
+					</ul>
 
 				</div>
 
@@ -124,6 +140,7 @@
 
 <!-- NAMESPACE DEFINITION -->
 <script src="js/echoes.js"></script>
+<script src="js/controllers/EchoesCtrl.js"></script>
 
 <!-- MODELS -->
 <!-- <script src="js/models/media_search.js"></script>
