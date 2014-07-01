@@ -1,3 +1,13 @@
 body {
 	background-image: url(../img/bg.png);
 }
+#search-results {
+	margin-top: 60px;
+}
+#search-results .thumbnail {
+	height: 160px; 
+	overflow:hidden
+}
+#search-results .thumbnail img {
+	margin-right: 5px;
+}
