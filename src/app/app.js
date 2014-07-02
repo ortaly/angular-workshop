@@ -10,7 +10,7 @@ function AppCtrl($scope, $http){
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
       params: {
-        part: 'snippet',
+        part: 'snippet,id',
         key: 'AIzaSyB7fFNreY1UzX1la5arnnAi3ZOyvqOV6kk',
         q: 'alice in chains',
         type: 'video',

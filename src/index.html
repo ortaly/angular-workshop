@@ -157,7 +157,7 @@
 					<div class="row">
 						<div ng-repeat="video in videos" class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img src="{{video.snippet.thumbnails.default.url}}" alt="{{video.snippet.title}}" class="pull-left">
+								<img ng-src="{{video.snippet.thumbnails.default.url}}" alt="{{video.snippet.title}}" class="pull-left">
 								<div class="caption pull">
 									<h3>{{video.snippet.title}}</h3>
 									<p>{{video.snippet.description}}</p>
