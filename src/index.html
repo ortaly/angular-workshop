@@ -58,27 +58,16 @@
 						<li class="dropdown">
 
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="glyphicon glyphicon-tag"></i> {{presetDisplay}}
+								<i class="glyphicon glyphicon-tag"></i> {{data.label}}
 								<span class="caret"></span>
 							</a>
 
 
 							<ul class="dropdown-menu">
 								
-								<li class="active">
-									<a href="#" data-preset="1">
-										{{preset1}}
-									</a>
-								</li>
-
-								<li class="">
-									<a href="#full album" data-preset="2">
-										{{preset2}}
-									</a>
-								</li>
-								<li class="">
-									<a href="#live" data-preset="3">
-										{{preset3}}
+								<li ng-repeat="item in data.items">
+									<a href="#" data-preset="{{$index}}">
+										{{item}}
 									</a>
 								</li>
 
@@ -86,24 +75,15 @@
 						</li>
 					</ul>
 					
-					<ul class="navbar-nav nav" id="duration-picker">
+					<ul class="navbar-nav nav" id="duration-picker" ng-controller="DurationCtrl">
 						<li class="dropdown">	
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="glyphicon glyphicon-time"></i> Duration
+								<i class="glyphicon glyphicon-time"></i> {{data.label}}
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li class="active">
-									<a href="#any" data-duration="0">Any</a>
-								</li>
-								<li class="">
-									<a href="#short" data-duration="1">Short (less then 4 minutes)</a>
-								</li>
-								<li class="">
-									<a href="#medium" data-duration="2">Medium (4-20 minutes)</a>
-								</li>
-								<li class="">
-									<a href="#long" data-duration="3">Long (longer than 20 minutes)</a>
+								<li class="" ng-repeat="item in data.items">
+									<a href="#any" data-duration="{{$index}}">{{item}}</a>
 								</li>
 							</ul>
 						</li>
