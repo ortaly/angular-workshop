@@ -1,4 +1,6 @@
 function PresetCtrl($scope) {
+	var selectedPreset = '';
+
 	$scope.data = {
 		label: 'Preset',
 		items: [
@@ -7,6 +9,15 @@ function PresetCtrl($scope) {
 			'Live'
 		]
 	};
+
+	// add the preset to the input's query model
+	$scope.setPreset = function (item) {
+		var query = $scope.$parent.query;
+		query = query.replace(selectedPreset, '').trim();
+		selectedPreset = item.toLowerCase();
+		query += ' ' + selectedPreset;
+		$scope.$parent.query = query;
+	}
 }
 function DurationCtrl($scope){
 	$scope.data = {
