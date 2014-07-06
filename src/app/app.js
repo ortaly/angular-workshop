@@ -33,5 +33,20 @@ function AppCtrl($scope, $http){
 	$http.get(url, config).success(function(res){
     	$scope.results = 'number of results: ' + res.pageInfo.totalResults;
     	$scope.videos = res.items;
-    })
+    });
+
+    $scope.isVideoItem = function (video) {
+    	return video.id.kind === 'youtube#video';
+    };
+
+    $scope.isChannelItem = function(video){
+    	return video.id.kind === 'youtube#channel';
+    };
+
+    // $scope.getMediaType = function (video) {
+    // 	return {
+    // 		'video-item': $scope.isVideoItem(video),
+    // 		'channel-item': $scope.isChannelItem(video)
+    // 	}
+    // }
 }
