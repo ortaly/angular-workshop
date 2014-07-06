@@ -135,8 +135,8 @@
 				
 					<div class="row">
 							<!-- ng-class="getMediaType(video)"> -->
+							<!-- ng-show="video.id.kind === 'youtube#video'" -->
 						<div ng-repeat="video in videos" class="col-sm-6 col-md-4" 
-							ng-show="video.id.kind === 'youtube#video'"
 							ng-class="{ 'video-item': isVideoItem(video), 'channel-item': isChannelItem(video) }">
 							<div class="thumbnail">
 								<div class="pull-left">
