@@ -135,7 +135,8 @@
 					 -->
 				
 					<div class="row">
-						<div ng-repeat="video in videos" class="col-sm-6 col-md-4">
+						<div ng-repeat="video in videos" class="col-sm-6 col-md-4" 
+							ng-class="{ 'video-item': video.id.kind === 'youtube#video'}">
 							<div class="thumbnail">
 								<div class="pull-left">
 									{{$index}}

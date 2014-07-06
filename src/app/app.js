@@ -25,7 +25,7 @@ function AppCtrl($scope, $http){
       params: {
         part: 'snippet,id',
         key: 'AIzaSyB7fFNreY1UzX1la5arnnAi3ZOyvqOV6kk',
-        q: $scope.query,
+        q: "alice in chains",
         // type: 'video',
         maxResults: 50
       }
