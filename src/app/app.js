@@ -20,14 +20,13 @@ function DurationCtrl($scope){
 	};
 }
 function AppCtrl($scope, $http){
-	return;
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
       params: {
         part: 'snippet,id',
         key: 'AIzaSyB7fFNreY1UzX1la5arnnAi3ZOyvqOV6kk',
         q: $scope.query,
-        type: 'video',
+        // type: 'video',
         maxResults: 50
       }
     };

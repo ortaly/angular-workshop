@@ -5,9 +5,14 @@ body {
 	margin-top: 60px;
 }
 #search-results .thumbnail {
-	height: 160px; 
-	overflow:hidden
+	height: 200px; 
+	overflow:auto;
 }
 #search-results .thumbnail img {
 	margin-right: 5px;
+}
+#search-results .thumbnail .label {
+	position: absolute;
+	top: .5em;
+	right: .5em;
 }

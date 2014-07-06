@@ -133,19 +133,24 @@
 						to see ng-repeat in action
 						NOTE: tweak apps so $http service is called
 					 -->
-				<!--
+				
 					<div class="row">
 						<div ng-repeat="video in videos" class="col-sm-6 col-md-4">
 							<div class="thumbnail">
-								<img ng-src="{{video.snippet.thumbnails.default.url}}" alt="{{video.snippet.title}}" class="pull-left">
+								<div class="pull-left">
+									{{$index}}
+									<img ng-src="{{video.snippet.thumbnails.default.url}}" alt="{{video.snippet.title}}">
+								</div>
 								<div class="caption pull">
 									<h3>{{video.snippet.title}}</h3>
-									<p>{{video.snippet.description}}</p>
+									<p>{{video.snippet.description}}
+									</p>
+									<aside class="label label-primary">{{video.id.kind}}</aside>
 								</div>
 							</div>
 						</div>
 					</div>
-				-->
+				
 				</div>
 			</div>
 		</div>
