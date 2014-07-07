@@ -31,21 +31,23 @@ function DurationCtrl($scope){
 	};
 }
 function AppCtrl($scope, $http){
-	$scope.query = 'alice in chains';
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
       params: {
         part: 'snippet,id',
         key: 'AIzaSyB7fFNreY1UzX1la5arnnAi3ZOyvqOV6kk',
-        q: $scope.query,
-        // type: 'video',
+        q: '',
         maxResults: 50
       }
     };
-	$http.get(url, config).success(function(res){
-    	$scope.results = 'number of results: ' + res.pageInfo.totalResults;
-    	$scope.videos = res.items;
-    });
+
+	var searchYoutube = function (newQuery, oldQuery) {
+		config.params.q = newQuery;
+		$http.get(url, config).success(function(res){
+	    	$scope.results = 'number of results: ' + res.pageInfo.totalResults;
+	    	$scope.videos = res.items;
+	    });
+	};
 
     $scope.isVideoItem = function (video) {
     	return video.id.kind === 'youtube#video';
@@ -61,4 +63,7 @@ function AppCtrl($scope, $http){
     // 		'channel-item': $scope.isChannelItem(video)
     // 	}
     // }
+    
+    $scope.$watch('query', searchYoutube);
+    searchYoutube();
 }
