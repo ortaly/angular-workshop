@@ -1,4 +1,4 @@
-function PresetCtrl($scope) {
+function PresetCtrl($scope, $rootScope) {
 	var selectedPreset = '';
 
 	$scope.data = {
@@ -19,7 +19,7 @@ function PresetCtrl($scope) {
 		};
 		// if 'All' is selected, send a empty string value
 		newPreset = newPreset === $scope.data.items[0] ? '' : newPreset;
-		$scope.$emit('preset-change', newPreset);
+		$rootScope.$broadcast('preset-change', newPreset);
 	});
 }
 function DurationCtrl($scope){
@@ -63,13 +63,14 @@ function AppCtrl($scope, $http, $rootScope){
     var selectedPreset = '';
 
     var setPreset = function(newPreset){
-		var query = $scope.query;
+		var query = $scope.query || '';
     	query = query.replace(selectedPreset, '').trim();
 		selectedPreset = newPreset.toLowerCase();
 		query += ' ' + selectedPreset;
 		$scope.query = query;
     };
 
+    // or use $rootScope
     $scope.$on('preset-change', function (ev, preset) {
     	setPreset(preset);
     });
