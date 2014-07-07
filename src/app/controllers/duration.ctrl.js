@@ -1,4 +1,6 @@
-app.controller('DurationCtrl', function DurationCtrl($scope){
+app.controller('DurationCtrl', [
+'$scope', 
+function DurationCtrl($scope){
 	$scope.data = {
 		label: 'Duration',
 		items: [
@@ -8,4 +10,4 @@ app.controller('DurationCtrl', function DurationCtrl($scope){
 			'Long (longer than 20 minutes)'
 		]
 	};
-});
+}]);

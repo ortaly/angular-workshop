@@ -1,4 +1,6 @@
-app.controller('AppCtrl', function AppCtrl($scope, $http, $rootScope){
+app.controller('AppCtrl', [
+'$scope', '$http', '$rootScope', 
+function AppCtrl($scope, $http, $rootScope){
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
       params: {
@@ -41,4 +43,4 @@ app.controller('AppCtrl', function AppCtrl($scope, $http, $rootScope){
     });
 
     $scope.searchYoutube();
-});
+}]);

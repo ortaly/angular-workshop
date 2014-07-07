@@ -1,4 +1,6 @@
-app.controller('PresetCtrl', function PresetCtrl($scope, $rootScope) {
+app.controller('PresetCtrl', [
+'$scope', '$rootScope', 
+function PresetCtrl($scope, $rootScope) {
 	var selectedPreset = '';
 
 	$scope.data = {
@@ -21,4 +23,4 @@ app.controller('PresetCtrl', function PresetCtrl($scope, $rootScope) {
 		newPreset = newPreset === $scope.data.items[0] ? '' : newPreset;
 		$rootScope.$broadcast('preset-change', newPreset);
 	});
-});
+}]);
