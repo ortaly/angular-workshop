@@ -66,7 +66,7 @@
 							<ul class="dropdown-menu">
 								
 								<li ng-repeat="item in data.items">
-									<a href="#" data-preset="{{$index}}" ng-click="setPreset(item)">
+									<a href="#" data-preset="{{$index}}" ng-click="$parent.preset = item">
 										{{item}}
 									</a>
 								</li>

@@ -10,14 +10,17 @@ function PresetCtrl($scope) {
 		]
 	};
 
+	$scope.preset = $scope.data.items[0];
+
 	// add the preset to the input's query model
-	$scope.setPreset = function (item) {
-		var query = $scope.$parent.query;
-		query = query.replace(selectedPreset, '').trim();
-		selectedPreset = item.toLowerCase();
-		query += ' ' + selectedPreset;
-		$scope.$parent.query = query;
-	}
+	$scope.$watch('preset', function(newPreset, oldPreset){
+		if (angular.equals(newPreset, oldPreset)) { 
+			return;
+		};
+		// if 'All' is selected, send a empty string value
+		newPreset = newPreset === $scope.data.items[0] ? '' : newPreset;
+		$scope.$emit('preset-change', newPreset);
+	});
 }
 function DurationCtrl($scope){
 	$scope.data = {
@@ -30,7 +33,7 @@ function DurationCtrl($scope){
 		]
 	};
 }
-function AppCtrl($scope, $http){
+function AppCtrl($scope, $http, $rootScope){
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
       params: {
@@ -56,13 +59,20 @@ function AppCtrl($scope, $http){
     	return video.id.kind === 'youtube#channel';
     };
 
-    // $scope.getMediaType = function (video) {
-    // 	return {
-    // 		'video-item': $scope.isVideoItem(video),
-    // 		'channel-item': $scope.isChannelItem(video)
-    // 	}
-    // }
     
-    // $scope.$watch('query', searchYoutube);
+    var selectedPreset = '';
+
+    var setPreset = function(newPreset){
+		var query = $scope.query;
+    	query = query.replace(selectedPreset, '').trim();
+		selectedPreset = newPreset.toLowerCase();
+		query += ' ' + selectedPreset;
+		$scope.query = query;
+    };
+
+    $scope.$on('preset-change', function (ev, preset) {
+    	setPreset(preset);
+    });
+
     $scope.searchYoutube();
 }
