@@ -41,10 +41,9 @@ function AppCtrl($scope, $http){
       }
     };
 
-	var searchYoutube = function (newQuery, oldQuery) {
-		config.params.q = newQuery;
+	$scope.searchYoutube = function () {
+		config.params.q = $scope.query;
 		$http.get(url, config).success(function(res){
-	    	$scope.results = 'number of results: ' + res.pageInfo.totalResults;
 	    	$scope.videos = res.items;
 	    });
 	};
@@ -64,6 +63,6 @@ function AppCtrl($scope, $http){
     // 	}
     // }
     
-    $scope.$watch('query', searchYoutube);
-    searchYoutube();
+    // $scope.$watch('query', searchYoutube);
+    $scope.searchYoutube();
 }
