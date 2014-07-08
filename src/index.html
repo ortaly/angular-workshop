@@ -146,7 +146,7 @@
 								<div class="caption pull">
 									<aside>{{video.snippet.publishedAt | date}}</aside>
 									<h3>{{video.snippet.title}}</h3>
-									<p>{{video.snippet.description}}
+									<p>{{video.snippet.description | filter:titleCase}}
 									</p>
 									<aside class="label label-primary">
 										<i class="fa" ng-class="{ 'fa-film': isVideoItem(video), 'fa-youtube-play': isChannelItem(video)}"></i>
@@ -209,5 +209,6 @@
 	<script type="text/javascript" src="app/controllers/app.ctrl.js"></script>
 	<script type="text/javascript" src="app/controllers/preset.ctrl.js"></script>
 	<script type="text/javascript" src="app/controllers/duration.ctrl.js"></script>
+	<script type="text/javascript" src="app/filters/titleCase.flr.js"></script>
 </body>
 </html>
