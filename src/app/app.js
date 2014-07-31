@@ -26,13 +26,38 @@ function DurationCtrl($scope){
 	$scope.data = {
 		label: 'Duration',
 		items: [
-			'Any',
-			'Short (less then 4 minutes)',
-			'Medium (4-20 minutes)',
-			'Long (longer than 20 minutes)'
+			{label:'Any', value:"any"},
+			{label:'Short (less then 4 minutes)', value:"short"},
+			{label:'Medium (4-20 minutes)', value:"medium"},
+			{label:'Long (longer than 20 minutes)', value:"long"}
 		]
 	};
+
+	$scope.duration = $scope.data.items[0].value;
+	
+	$scope.$watch('duration', function(newDureation, oldDuration){
+		if (angular.equals(newDureation, oldDuration)) { 
+			return;
+		};
+		$rootScope.$broadcast('duration-changed', newDureation);
+	});
 }
+
+function FeedCtrl($scope, $rootScope) {
+	$scope.data = {
+		items: [
+		{ label: 'Videos', icon: 'film', value: 'video' },
+		{ label: 'Playlists', icon: 'th-list', value: 'playlist' }
+		]
+	}
+	$scope.active = $scope.data.items[0];
+
+	$scope.setFeed = function(item){
+		$scope.active = item;
+		$rootScope.$broadcast('feed-type-changed', item.value);
+	}
+}
+
 function AppCtrl($scope, $http, $rootScope){
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
@@ -70,10 +95,28 @@ function AppCtrl($scope, $http, $rootScope){
 		$scope.query = query;
     };
 
+    var setDuration = function(newDuration) {
+    	config.params.videoDuration = newDuration;
+    	config.params.type = "video";
+    	$scope.searchYoutube();
+    };
+
+    var setFeedType = function(feedType) {
+    	config.params.type = feedType;
+    	$scope.searchYoutube();
+    };
+
     // or use $rootScope
     $scope.$on('preset-change', function (ev, preset) {
     	setPreset(preset);
     });
+	
+	$scope.$on('duration-changed', function (ev, duration) {
+    	setDuration(duration);
+    });
 
+    $scope.$on('feed-type-changed', function (ev, feedType) {
+    	setFeedType(feedType);
+    });
     $scope.searchYoutube();
 }

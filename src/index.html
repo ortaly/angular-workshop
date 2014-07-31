@@ -44,13 +44,9 @@
 
 				<div class="nav-collapse">
 					
-					<ul id="feed-filter" class="nav navbar-nav">
-				        <li>
-				        	<a href="#"><i class="glyphicon glyphicon-film"></i> Videos</a>
-				        </li>
-				        
-				        <li>
-				        	<a href="#"><i class="glyphicon glyphicon-th-list"></i> Playlists</a>
+					<ul id="feed-filter" class="nav navbar-nav" ng-controller="FeedCtrl">
+				        <li ng-repeat="item in data.items" ng-class="{active: item.value === active.value}">
+				        	<a href="#" ng-click="setFeed(item)"><i class="glyphicon glyphicon-{{item.icon}}"></i> {{item.label}}</a>
 				        </li>
 					</ul>
 					
@@ -83,7 +79,7 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li class="" ng-repeat="item in data.items">
-									<a href="#any" data-duration="{{$index}}">{{item}}</a>
+									<a href="#{{item.value}}" ng-click="$parent.duration = item.value">{{item.label}}</a>
 								</li>
 							</ul>
 						</li>
