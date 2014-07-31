@@ -22,7 +22,7 @@ function PresetCtrl($scope, $rootScope) {
 		$rootScope.$broadcast('preset-change', newPreset);
 	});
 }
-function DurationCtrl($scope){
+function DurationCtrl($scope, $rootScope){
 	$scope.data = {
 		label: 'Duration',
 		items: [
