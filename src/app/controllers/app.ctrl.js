@@ -1,19 +1,9 @@
 app.controller('AppCtrl', [
-'$scope', '$http', '$rootScope', 
-function AppCtrl($scope, $http, $rootScope){
-	var url = 'https://www.googleapis.com/youtube/v3/search';
-	var config = {
-      params: {
-        part: 'snippet,id',
-        key: 'AIzaSyB7fFNreY1UzX1la5arnnAi3ZOyvqOV6kk',
-        q: '',
-        maxResults: 50
-      }
-    };
+'$scope', '$rootScope', 'YoutubeSearch', 'preset',
+function AppCtrl($scope, $rootScope, YoutubeSearch, preset){
 
 	$scope.searchYoutube = function () {
-		config.params.q = $scope.query;
-		$http.get(url, config).success(function(res){
+		YoutubeSearch.search($scope.query).success(function(res){
 	    	$scope.videos = res.items;
 	    });
 	};
@@ -26,20 +16,9 @@ function AppCtrl($scope, $http, $rootScope){
     	return video.id.kind === 'youtube#channel';
     };
 
-    
-    var selectedPreset = '';
-
-    var setPreset = function(newPreset){
-		var query = $scope.query || '';
-    	query = query.replace(selectedPreset, '').trim();
-		selectedPreset = newPreset.toLowerCase();
-		query += ' ' + selectedPreset;
-		$scope.query = query;
-    };
-
     // or use $rootScope
-    $scope.$on('preset-change', function (ev, preset) {
-    	setPreset(preset);
+    $scope.$on('preset-change', function (ev, presetValue) {
+		$scope.query = preset.update($scope.query, presetValue);
     });
 
     $scope.searchYoutube();
