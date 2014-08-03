@@ -1,25 +1,25 @@
 body {
 	background-image: url(../img/bg.png);
 }
-#search-results {
+.youtube-results {
 	margin-top: 60px;
 }
-#search-results .thumbnail .label {
+.youtube-results .thumbnail .label {
 	position: absolute;
 	top: .5em;
 	right: .5em;
 }
 
-#search-results .panel-body {
+.youtube-results .panel-body {
 	max-height: 250px;
 	overflow: auto;
 }
-#search-results .panel-heading {
+.youtube-results .panel-heading {
 	max-height: 81px;
 	height: 81px;
 	overflow: hidden;
 }
-#search-results .label {
+.youtube-results .label {
 	position: absolute;
 	right: 17px;
 	top: 2px;
