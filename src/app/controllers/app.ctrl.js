@@ -21,5 +21,10 @@ function AppCtrl($scope, $rootScope, YoutubeSearch, preset){
 		$scope.query = preset.update($scope.query, presetValue);
     });
 
+    $scope.$on('feed-type-changed', function (ev, feedType) {
+        YoutubeSearch.setType(feedType);
+        $scope.searchYoutube();
+    });
+
     $scope.searchYoutube();
 }]);

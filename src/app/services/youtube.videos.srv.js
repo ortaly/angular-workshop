@@ -13,5 +13,9 @@ angular.module('mediaDeck')
 	this.search = function(query){
 		config.params.q = query;
 		return $http.get(url, config);
-	}
+	};
+
+  this.setType = function(type){
+    config.params.type = type;
+  };
 })
