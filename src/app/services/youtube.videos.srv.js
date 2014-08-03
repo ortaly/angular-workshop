@@ -1,10 +1,10 @@
 angular.module('mediaDeck')
-.service('YoutubeSearch', function($http){
+.service('YoutubeSearch', function($http, YOUTUBE_API_KEY){
 	var url = 'https://www.googleapis.com/youtube/v3/search';
 	var config = {
       params: {
         part: 'snippet,id',
-        key: 'AIzaSyB7fFNreY1UzX1la5arnnAi3ZOyvqOV6kk',
+        key: YOUTUBE_API_KEY,
         q: '',
         maxResults: 50
       }

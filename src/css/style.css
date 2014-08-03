@@ -1,13 +1,8 @@
 body {
 	background-image: url(../img/bg.png);
 }
-.youtube-results {
+.view-content {
 	margin-top: 60px;
-}
-.youtube-results .thumbnail .label {
-	position: absolute;
-	top: .5em;
-	right: .5em;
 }
 
 .youtube-results .panel-body {
@@ -19,8 +14,11 @@ body {
 	height: 81px;
 	overflow: hidden;
 }
-.youtube-results .label {
+.view-content .label-primary {
 	position: absolute;
 	right: 17px;
 	top: 2px;
+}
+.youtube-results .description {
+	min-height: 140px;
 }
