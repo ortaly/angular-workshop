@@ -4,15 +4,23 @@ body {
 #search-results {
 	margin-top: 60px;
 }
-#search-results .thumbnail {
-	height: 200px; 
-	overflow:auto;
-}
-#search-results .thumbnail img {
-	margin-right: 5px;
-}
 #search-results .thumbnail .label {
 	position: absolute;
 	top: .5em;
 	right: .5em;
+}
+
+#search-results .panel-body {
+	max-height: 250px;
+	overflow: auto;
+}
+#search-results .panel-heading {
+	max-height: 81px;
+	height: 81px;
+	overflow: hidden;
+}
+#search-results .label {
+	position: absolute;
+	right: 17px;
+	top: 2px;
 }
