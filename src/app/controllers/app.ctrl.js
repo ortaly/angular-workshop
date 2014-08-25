@@ -26,8 +26,9 @@ function AppCtrl($scope, $rootScope, YoutubeSearch, preset){
         $scope.searchYoutube();
     });
 
-    $rootScope.$on('$routeChangeStart', function(route){
-        console.log('route started:', arguments.length, route);
+    $rootScope.$on('$routeChangeStart', function(ev, next, current){
+        console.log('current route:', arguments.length, current);
+        console.log('next route:', arguments.length, next);
     });
 
     $scope.searchYoutube();
