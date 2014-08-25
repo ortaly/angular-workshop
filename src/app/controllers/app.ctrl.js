@@ -8,14 +8,6 @@ function AppCtrl($scope, $rootScope, YoutubeSearch, preset){
 	    });
 	};
 
-    $scope.isVideoItem = function (video) {
-    	return video.id.kind === 'youtube#video';
-    };
-
-    $scope.isChannelItem = function(video){
-    	return video.id.kind === 'youtube#channel';
-    };
-
     // or use $rootScope
     $scope.$on('preset-change', function (ev, presetValue) {
 		$scope.query = preset.update($scope.query, presetValue);
