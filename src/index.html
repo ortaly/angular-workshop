@@ -68,13 +68,13 @@
 						</ul>
 						
 						<ul class="navbar-nav nav" id="search-presets" ng-controller="PresetCtrl">
+						<!-- <ul class="navbar-nav nav" id="search-presets"> -->
 							<li class="dropdown">
 
 								<a class="dropdown-toggle" data-toggle="dropdown">
 									<i class="glyphicon glyphicon-tag"></i> {{data.label}}
 									<span class="caret"></span>
 								</a>
-
 
 								<ul class="dropdown-menu">
 									
@@ -86,6 +86,13 @@
 
 								</ul>
 							</li>
+
+							<!-- <dropdown label="Preset" 
+								items="presets" 
+								on-select="onPresetChange(item)"
+								icon="tag"
+							></dropdown> -->
+
 						</ul>
 						
 						<ul class="navbar-nav nav" id="duration-picker" ng-controller="DurationCtrl">
@@ -182,7 +189,7 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.js"></script>
 
 	<!-- APP FILES -->
@@ -199,6 +206,7 @@
 	<script type="text/javascript" src="app/resources/preset.js"></script>
 	<script type="text/javascript" src="app/resources/constants.js"></script>
 	<script type="text/javascript" src="app/directives/youtube/youtube.media.drv.js"></script>
+	<script type="text/javascript" src="app/directives/ui/ui-controls.drv.js"></script>
 
 	<script type="text/javascript">
 		$("#menu-toggle").click(function(e) {
