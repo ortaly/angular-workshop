@@ -6,9 +6,8 @@ var app = angular.module('mediaDeck', [
 function($routeProvider, $locationProvider) {
 $routeProvider
 	.when('/', {
-		templateUrl: 'app/partials/youtube.videos.tpl.html'
-		// controller: 'AppCtrl',
-		// controllerAs: 'app'
+		templateUrl: 'app/partials/youtube.videos.tpl.html',
+		controller: 'VideosCtrl'
 	})
 
 	.when('/video/:id', {

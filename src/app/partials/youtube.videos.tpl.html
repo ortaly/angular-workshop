@@ -1,5 +1,3 @@
 <div class="row view-content youtube-results">
-	<youtube-media 
-		ng-repeat="video in videos | orderBy:'snippet.publishedAt':'reverse' | limitTo:25">
-	</youtube-media>
+	<media-list model="videos"></media-list>
 </div>
