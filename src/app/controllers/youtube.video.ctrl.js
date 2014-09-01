@@ -1,7 +1,7 @@
 angular.module('mediaDeck')
 .controller('YoutubeVideoCtrl', [
-'$scope', 'YoutubeVideo', '$routeParams', '$location',
-function($scope, YoutubeVideo, $routeParams, $location, $route){
+'$scope', 'ytVideo', '$location',
+function($scope, ytVideo, $location){
 	var getDuration = function (time) {
 		var t = time.split("PT")[1]
 			.replace(/(H|M)/g, ":")
@@ -14,10 +14,8 @@ function($scope, YoutubeVideo, $routeParams, $location, $route){
 	};
 
 
-	YoutubeVideo.fetch($routeParams.id).then(function(video){
-		$scope.video = video;
-		$scope.time = getDuration(video.contentDetails.duration)
-	});
+	$scope.video = ytVideo;
+	$scope.time = getDuration(ytVideo.contentDetails.duration)
 
 	$scope.goBack = function () {
 		$location.url('/');

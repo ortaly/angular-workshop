@@ -12,7 +12,12 @@ $routeProvider
 
 	.when('/video/:id', {
 		templateUrl: 'app/partials/youtube.video.tpl.html',
-		controller: 'YoutubeVideoCtrl'
+		controller: 'YoutubeVideoCtrl', 
+		resolve: {
+			ytVideo: function($route, YoutubeVideo){
+				return YoutubeVideo.fetch($route.current.params.id);
+			}
+		}
 	})
 
 	.otherwise({
