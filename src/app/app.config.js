@@ -1,6 +1,6 @@
 app.config(
 function($routeProvider, $locationProvider, YOUTUBE_API_KEY
-// ,YoutubeVideosProvider
+,YoutubeVideosProvider
 	) {
 $routeProvider
 	.when('/', {
@@ -23,5 +23,5 @@ $routeProvider
 		redirectTo: '/'
 	});
 
-	// YoutubeVideosProvider.setApiKey(YOUTUBE_API_KEY);
+YoutubeVideosProvider.setApiKey(YOUTUBE_API_KEY);
 });

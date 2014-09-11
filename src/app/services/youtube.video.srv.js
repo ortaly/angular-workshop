@@ -1,4 +1,4 @@
-var YoutubeVideosSearch = function(YOUTUBE_API_KEY){
+var YoutubeVideosSearch = function($http, YOUTUBE_API_KEY){
     var url = 'https://www.googleapis.com/youtube/v3/videos';
     var config = {
         params: {
@@ -41,10 +41,10 @@ angular.module('mediaDeck')
     }
   };
   this.setApiKey = function(key){
-    this.config.params.key = key;
+    config.params.key = key;
   }
 
-  var YoutubeVideos = function(){
+  var YoutubeVideos = function($http){
     this.fetch = function(id){
       this.setId(id);
       return $http.get(url, config).then(function(res){
@@ -57,7 +57,7 @@ angular.module('mediaDeck')
     };
   };
 
-  this.$get = function() {
+  this.$get = function($http) {
     return new YoutubeVideos($http);
   }
 })
