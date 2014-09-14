@@ -12,4 +12,5 @@ module.exports = function(grunt) {
   
   // run in cmd:$ grunt
   grunt.registerTask('default', ['jshint', 'concat']);
+  grunt.registerTask('build', ['jshint', 'concat:dist']);
 };
