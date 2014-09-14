@@ -7,6 +7,7 @@ module.exports = function(grunt){
 	return {
 		options: {
 	      separator: ';',
+	      sourceMap: true
 	    },
 	    dev: {
 	      src: config.js,
