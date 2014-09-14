@@ -1,0 +1,23 @@
+{
+  "name": "angular-workshop",
+  "version": "0.0.1",
+  "description": "front end workflow workshop at Tikal",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tikalk/angular-workshop.git"
+  },
+  "keywords": [
+    "javascript",
+    "angular",
+    "grunt"
+  ],
+  "author": "Oren Farhi",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/tikalk/angular-workshop/issues"
+  }
+}
