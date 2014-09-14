@@ -4,7 +4,7 @@ module.exports = function(grunt){
 	      separator: ';',
 	    },
 	    dev: {
-	      src: ['src/app/**/*.js'],
+	      src: ['src/app/app.js', '!src/app/bundle.js', 'src/app/**/*.js'],
 	      dest: 'src/app/bundle.js',
 	    }
 	}

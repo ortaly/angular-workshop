@@ -3,6 +3,6 @@ module.exports = function(grunt) {
 		options: {
 	      asi: true
 	    },
-	    all: ['./src/app/**/*.js']
+	    all: ['./src/app/**/*.js', '!./src/app/bundle.js']
 	}
 }
