@@ -1,7 +1,13 @@
 module.exports = function(grunt) {
 
   //configure grunt
-  var gruntConfig = {};
+  var gruntConfig = {
+    paths: {
+      build: {
+        js: 'bundle.js'
+      }
+    }
+  };
 
   gruntConfig['jshint'] = require('./grunt/jshint.js')(grunt);
   gruntConfig['concat'] = require('./grunt/concat.js')(grunt);
@@ -11,6 +17,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   
   // run in cmd:$ grunt
-  grunt.registerTask('default', ['jshint', 'concat']);
+  grunt.registerTask('default', ['jshint', 'concat:dev']);
   grunt.registerTask('build', ['jshint', 'concat:dist']);
 };

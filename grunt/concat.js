@@ -1,8 +1,7 @@
 module.exports = function(grunt){
 	var config = {
-		js: ['src/app/app.js', '!src/app/bundle.js', 'src/app/**/*.js'],
-		destFile: 'bundle.js'
-	}
+		js: ['src/app/app.js', '!src/app/bundle.js', 'src/app/**/*.js']
+	};
 
 	return {
 		options: {
@@ -11,12 +10,12 @@ module.exports = function(grunt){
 	    },
 	    dev: {
 	      src: config.js,
-	      dest: 'src/app/' + config.destFile,
+	      dest: 'src/app/<%= paths.build.js %>'
 	    },
 
 	    dist: {
 	    	files: {
-		    	'dist/app/bundle.js': config.js
+		    	'dist/app/<%= paths.build.js %>': config.js
 		    }
 	    }
 	}
