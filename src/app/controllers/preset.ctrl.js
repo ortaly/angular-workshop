@@ -18,7 +18,7 @@ function PresetCtrl($scope, $rootScope) {
 	$scope.$watch('preset', function(newPreset, oldPreset){
 		if (angular.equals(newPreset, oldPreset)) { 
 			return;
-		};
+		}
 		// if 'All' is selected, send a empty string value
 		newPreset = newPreset === $scope.data.items[0] ? '' : newPreset;
 		$rootScope.$broadcast('preset-change', newPreset);
