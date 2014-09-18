@@ -1,4 +1,5 @@
 var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
 var gulp   = require('gulp');
 //configure grunt
 var configs = {
@@ -15,5 +16,5 @@ var configs = {
 gulp.task('lint', function() {
   return gulp.src(configs.paths.files.js)
     .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter(stylish));
 });
