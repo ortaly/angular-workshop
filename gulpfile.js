@@ -1,6 +1,10 @@
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var gulp   = require('gulp');
+
+// require external tasks
+require('./gulp/concat.js');
+
 //configure grunt
 var configs = {
 	paths: {
