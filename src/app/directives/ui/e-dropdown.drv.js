@@ -1,9 +1,9 @@
-angular.module('ui-controls', [])
+angular.module('ui-controls')
 .directive('dropdown', function(){
 	return {
 		restrict: 'E',
 		replace: true,
-		templateUrl: 'app/directives/ui/dropdown.tpl.html',
+		templateUrl: 'app/directives/ui/e-dropdown.tpl.html',
 		scope: {
 			label: '@',
 			icon: '@',
@@ -15,7 +15,7 @@ angular.module('ui-controls', [])
 				scope.onSelect({
 					item: item
 				});
-			}
+			};
 		}
-	}
-})
+	};
+});
