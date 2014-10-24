@@ -1,1 +1,1 @@
-angular.module('ui-controls', []);
+angular.module('ui.controls', []);

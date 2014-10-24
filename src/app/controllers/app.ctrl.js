@@ -8,15 +8,15 @@ function AppCtrl($scope, $rootScope, YoutubeSearch, preset){
 	    });
 	};
 
-    // $scope.presets = [
-    //     'All',
-    //     'Albums',
-    //     'Live'
-    // ];
+    $scope.presets = [
+        'All',
+        'Albums',
+        'Live'
+    ];
 
-    // $scope.onPresetChange = function(presetValue){
-    //     $scope.query = preset.update($scope.query, presetValue);
-    // };
+    $scope.onPresetChange = function(presetValue){
+        $scope.query = preset.update($scope.query, presetValue);
+    };
     // or use $rootScope
     $scope.$on('preset-change', function (ev, presetValue) {
 		$scope.query = preset.update($scope.query, presetValue);

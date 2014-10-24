@@ -18,7 +18,7 @@ module.exports = function(config) {
 			
 			'app/**/*.html',
 			// 'common/**/*.html',
-			'bundle.js',
+			'app/bundle.js',
 			'app/**/*spec.js'
 			// 'common/**/*spec.js'
 	    ],

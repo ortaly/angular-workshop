@@ -1,7 +1,7 @@
 var app = angular.module('mediaDeck', [
 	'ngRoute',
 	'youtube.directives',
-	'ui-controls'
+	'ui.controls'
 ])
 .config(['$routeProvider', '$locationProvider',
 function($routeProvider, $locationProvider) {

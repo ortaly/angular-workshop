@@ -1,9 +1,9 @@
-angular.module('ui-controls')
-.directive('dropdown', function(){
+angular.module('ui.controls')
+.directive('eDropdown', function(){
 	return {
 		restrict: 'E',
 		replace: true,
-		templateUrl: 'app/directives/ui/e-dropdown.tpl.html',
+		templateUrl: 'app/directives/ui/e-dropdown/e-dropdown-tpl.html',
 		scope: {
 			label: '@',
 			icon: '@',

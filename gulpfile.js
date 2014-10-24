@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 // require external tasks
 require('./gulp/concat.js');
 require('./gulp/server.js');
-require('./gulp/test.js');
+// require('./gulp/test.js');
 require('./gulp/watch.js');
 
 //configure grunt
@@ -33,4 +33,16 @@ gulp.task('serve', function (callback) {
     'server:start',
     'watch'
   );
+});
+
+var karma = require('karma').server;
+
+/**
+ * Run test once and exit
+ */
+module.exports = gulp.task('test', function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: false
+  }, done);
 });
