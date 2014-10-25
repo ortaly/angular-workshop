@@ -30,10 +30,27 @@ describe('Unit: dropdown directive - ', function () {
 		expect(element.find('ul li').length).toBe(scope.presets.length);
 	});
 
-	// it("should render checkboxes if 'selected' is set html", function(){
-	// 	expect(element.find('.grid-item input').length).toBeGreaterThan(0)
-	// });
+	it("should render a 'tag' icon", function(){
+		expect(element.find('i[class*="-tag"]').length).toBe(1);
+	});
 	
+	it("should render the label according to the 'label' attribute", function() {
+		expect(element.find('.dropdown-toggle').text().trim()).toBe('Preset');
+	});
+
+	it("should call a function when select has changed", function() {
+		spyOn(scope, 'onPresetChange');
+		element.isolateScope().handleClick(scope.presets[0]);
+		expect(scope.onPresetChange).toHaveBeenCalled();
+	});
+
+	it("should call a function with the selected item when select has changed", function() {
+		spyOn(scope, 'onPresetChange');
+		element.isolateScope().handleClick(scope.presets[0]);
+		expect(scope.onPresetChange).toHaveBeenCalledWith(scope.presets[0]);
+	});
+
+
 	// it("should add an item to the selected array", function() {
 	// 	var firstItem = element.find('.grid-item').eq(0).children().first();
 	// 	var itemScope = angular.element(firstItem).scope();
