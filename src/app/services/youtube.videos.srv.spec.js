@@ -1,11 +1,13 @@
 describe('AppCtrl', function(){
-  var scope, ctrl, httpBackend, url, mockData;
+  var scope, ctrl, httpBackend, url, mockData, rootScope, YoutubeSearchSrv;
 
   beforeEach(module("mediaDeck"));
 
   beforeEach(
     inject(
       function($controller, $rootScope, YoutubeSearch, preset, $httpBackend) {
+        rootScope = $rootScope;
+        YoutubeSearchSrv = YoutubeSearch;
         httpBackend = $httpBackend;
         scope = $rootScope.$new();
         ctrl = $controller("AppCtrl", {
@@ -21,7 +23,7 @@ describe('AppCtrl', function(){
     )
   );
 
-  it('should set videos after succesful search', function() {
+  it('should set videos after successful search', function() {
     httpBackend.whenGET(url).respond(mockData);
     scope.searchYoutube();
     httpBackend.flush();
@@ -30,4 +32,19 @@ describe('AppCtrl', function(){
     expect(scope.videos.length).toBe(1);
   });
 
+  it("set the feed type when changed in YoutubeSearch and perform search",  function(){
+    httpBackend.whenGET(url).respond(mockData);
+    spyOn(scope, 'searchYoutube').and.callFake(function(){
+      return 'ok';
+    });
+
+    spyOn(YoutubeSearchSrv, 'setType').and.callFake(function(){
+      return 'set';
+    });
+
+    rootScope.$broadcast('feed-type-changed', 'playlist');
+    scope.$digest();
+    expect(YoutubeSearchSrv.setType).toHaveBeenCalled();
+    expect(scope.searchYoutube).toHaveBeenCalled();
+  })
 });
