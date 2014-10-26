@@ -8,10 +8,15 @@ angular.module('youtube.directives')
 		// 	ng-repeat=\"video in videos | orderBy:'snippet.publishedAt':'reverse' | limitTo:25\"> \
 		// </youtube-media>",
 		scope: {
-			videos: '=model'
+			videos: '=model',
+			onSelect: '&'
 		},
 		link: function(scope, element, attrs){
-
+			scope.playSelectedVideo = function(video){
+				scope.onSelect({
+					video: video
+				});
+			};
 		}
 	};
 });

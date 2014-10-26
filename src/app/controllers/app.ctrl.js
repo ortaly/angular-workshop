@@ -17,6 +17,7 @@ function AppCtrl($scope, $rootScope, YoutubeSearch, preset){
     $scope.onPresetChange = function(presetValue){
         $scope.query = preset.update($scope.query, presetValue);
     };
+
     // or use $rootScope
     $scope.$on('preset-change', function (ev, presetValue) {
 		$scope.query = preset.update($scope.query, presetValue);

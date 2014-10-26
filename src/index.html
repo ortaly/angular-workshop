@@ -149,10 +149,11 @@
 		</div>
 
 		<!-- YOUTUBE PLAYER -->
-		<div id="youtube-player" class="navbar navbar-default navbar-fixed-bottom">
+		<div id="youtube-player" class="navbar navbar-default navbar-fixed-bottom"
+			ng-controller="YoutubeCtrl">
 			<div class="container-fluid">
-				<div class="yt-player ux-maker">
-					<div id="player"></div>
+				<div class="yt-player ux-maker thumbnail">
+					<div id="player" youtube-player video-id="video.id" height="240" width="320"></div>
 				</div>
 				
 				<ul class="navbar-nav nav">
@@ -171,13 +172,15 @@
 				<ul class="navbar-nav nav">
 
 					<li>
-						<div class="btn-group dropup navbar-btn">
+						<div class="btn-group dropup navbar-btn" ng-controller="MediaInfoCtrl">
 							<button type="button" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-								no media yet...
+								{{video.title}}
 								 <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								
+								<li>
+									{{video.desc}}
+								</li>
 							</ul>
 						</div>
 					</li>

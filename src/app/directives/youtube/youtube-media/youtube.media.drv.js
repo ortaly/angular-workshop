@@ -1,19 +1,37 @@
+(function() {
 angular.module('youtube.directives')
-.directive('youtubeMedia', function(){
+.directive('youtubeMedia', YoutubeMedia);
 	
-	return {
+function YoutubeMedia() {
+	var directive = {
 		restrict: 'E',
 		templateUrl: 'app/directives/youtube/youtube-media/youtube.media.tpl.html',
 		replace: true,
-		link: function (scope, element, attrs) {
-			scope.isVideoItem = function (video) {
-		    	return video.id.kind === 'youtube#video';
-		    };
-
-		    scope.isChannelItem = function(video){
-		    	return video.id.kind === 'youtube#channel';
-		    };
-		}
+		scope: {
+			onPlay: '&',
+			video: '='
+		},
+		link: link
 	};
 
-});
+	return directive;
+
+	function link (scope, element, attrs) {
+		scope.isVideoItem = function (video) {
+	    	return video.id.kind === 'youtube#video';
+	    };
+
+	    scope.isChannelItem = function(video){
+	    	return video.id.kind === 'youtube#channel';
+	    };
+
+	    scope.playVideo = function(video){
+	    	scope.onPlay({
+	    		video: video
+	    	});
+		};
+	}
+
+}
+
+})();

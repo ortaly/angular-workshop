@@ -22,3 +22,13 @@ body {
 .youtube-results .description {
 	min-height: 140px;
 }
+
+.yt-player {
+	position: fixed;
+	transition: transform .3s ease-out;
+	transform: translateY(-242px);
+}
+
+.yt-player.closed{
+	transform: translateY(150px);
+}
