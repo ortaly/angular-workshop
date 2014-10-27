@@ -11,9 +11,10 @@ angular.module('ui.controls')
 			onSelect: '&'
 		},
 		link: function (scope, element, attrs) {
-			scope.handleClick = function (item) {
+			scope.handleClick = function (item, $index) {
 				scope.onSelect({
-					item: item
+					item: item,
+					index: $index
 				});
 			};
 		}

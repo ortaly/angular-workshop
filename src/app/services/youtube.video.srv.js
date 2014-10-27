@@ -13,11 +13,23 @@ angular.module('mediaDeck')
 	this.fetch = function(id){
 		this.setId(id);
 		return $http.get(url, config).then(function(res){
-      return res.data.items[0];
+      return res.data.items;
     });
 	};
 
   this.setId = function(id){
     config.params.id = id;
   };
-})
+
+  this.toFriendlyDuration = function (time) {
+    var t = time.split("PT")[1]
+      .replace(/(H|M)/g, ":")
+      .replace("S", "");
+    var ts = t.split(":");
+    ts = ts.map(function(d){
+      return d.length === 1 ? "0" + d : d;
+    });
+    return ts.join(":");
+  };
+  
+});

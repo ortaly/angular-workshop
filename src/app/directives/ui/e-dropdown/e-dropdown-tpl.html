@@ -4,7 +4,7 @@
 		<span class="caret"></span>
 	</a>
 	<ul class="dropdown-menu">
-		<li ng-repeat="item in items" ng-click="handleClick(item)">
+		<li ng-repeat="item in items" ng-click="handleClick(item, $index)">
 			<a data-duration="{{$index}}">{{item}}</a>
 		</li>
 	</ul>

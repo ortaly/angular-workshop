@@ -15,9 +15,12 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Asap|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/simple-sidebar.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/echoes-style.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/flick/jquery-ui.css">
 </head>
 <body ng-controller="AppCtrl">
 	
@@ -69,45 +72,21 @@
 						
 						<!-- <ul class="navbar-nav nav" id="search-presets" ng-controller="PresetCtrl"> -->
 						<ul class="navbar-nav nav" id="search-presets">
-							<!-- <li class="dropdown">
-
-								<a class="dropdown-toggle" data-toggle="dropdown">
-									<i class="glyphicon glyphicon-tag"></i> {{data.label}}
-									<span class="caret"></span>
-								</a>
-
-								<ul class="dropdown-menu">
-									
-									<li ng-repeat="item in data.items">
-										<a data-preset="{{$index}}" ng-click="$parent.preset = item">
-											{{item}}
-										</a>
-									</li>
-
-								</ul>
-							</li> -->
-
 							<e-dropdown label="Preset" 
 								items="presets" 
 								on-select="onPresetChange(item)"
 								icon="tag"
 							></e-dropdown>
-
 						</ul>
 						
-						<ul class="navbar-nav nav" id="duration-picker" ng-controller="DurationCtrl">
-							<li class="dropdown">	
-								<a class="dropdown-toggle" data-toggle="dropdown">
-									<i class="glyphicon glyphicon-time"></i> {{data.label}}
-									<span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									<li class="" ng-repeat="item in data.items">
-										<a data-duration="{{$index}}">{{item}}</a>
-									</li>
-								</ul>
-							</li>
+						<ul class="navbar-nav nav" id="search-presets">
+							<e-dropdown label="Duration" 
+								items="durations" 
+								on-select="onDurationChange(item, index)"
+								icon="time"
+							></e-dropdown>
 						</ul>
+						
 					</div>
 
 					<!-- User Profile -->

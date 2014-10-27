@@ -12,9 +12,9 @@
 
     	$scope.$watch('video.id()', function (nid, o) {
     		if (nid) {
-    			YoutubeVideo.fetch(nid).then(function(res){
-    				$scope.video.title = res.snippet.title;
-    				$scope.video.desc = res.snippet.description;
+    			YoutubeVideo.fetch(nid).then(function(items){
+    				$scope.video.title = items[0].snippet.title;
+    				$scope.video.desc = items[0].snippet.description;
     			});
     		}
     	});

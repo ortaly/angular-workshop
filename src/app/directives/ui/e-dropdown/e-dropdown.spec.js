@@ -40,14 +40,14 @@ describe('Unit: dropdown directive - ', function () {
 
 	it("should call a function when select has changed", function() {
 		spyOn(scope, 'onPresetChange');
-		element.isolateScope().handleClick(scope.presets[0]);
+		element.isolateScope().handleClick([scope.presets[0], 0]);
 		expect(scope.onPresetChange).toHaveBeenCalled();
 	});
 
 	it("should call a function with the selected item when select has changed", function() {
 		spyOn(scope, 'onPresetChange');
-		element.isolateScope().handleClick(scope.presets[0]);
-		expect(scope.onPresetChange).toHaveBeenCalledWith(scope.presets[0]);
+		element.isolateScope().handleClick([scope.presets[0], 0]);
+		expect(scope.onPresetChange).toHaveBeenCalledWith([scope.presets[0], 0]);
 	});
 
 

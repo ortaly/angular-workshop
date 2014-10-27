@@ -35,10 +35,12 @@ describe("YouTube Player Directive - ", function() {
 	});
 
 	xit("should render an iframe", function() {
-		var iframe = $document.find('#player');
-		expect(iframe.get(0).tagName.toLowerCase()).toMatch('iframe');
-		// expect(element.isolateScope().apiReady()).toBeTruthy();
-		// done();
+		setTimeout(function(done){
+			var iframe = $document.find('#player');
+			expect(iframe.get(0).tagName.toLowerCase()).toMatch('iframe');
+			// expect(element.isolateScope().apiReady()).toBeTruthy();
+			done();
+		}, 2000)
 	});
 
 	afterEach(function() {

@@ -14,13 +14,13 @@ function($scope, YoutubeVideo, $routeParams, $location, $route){
 	};
 
 
-	YoutubeVideo.fetch($routeParams.id).then(function(video){
-		$scope.video = video;
-		$scope.time = getDuration(video.contentDetails.duration)
+	YoutubeVideo.fetch($routeParams.id).then(function(items){
+		$scope.video = items[0];
+		$scope.time = getDuration(items[0].contentDetails.duration)
 	});
 
 	$scope.goBack = function () {
 		$location.url('/');
-	}
+	};
 
-}])
+}]);
