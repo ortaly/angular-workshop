@@ -3,8 +3,8 @@ module.exports = function(config) {
 
 	config.set({
 		basePath: './src',
-		// browsers: ['PhantomJS', 'Chrome'],
-		browsers: ['PhantomJS'],
+		browsers: ['PhantomJS', 'Chrome'],
+		// browsers: ['PhantomJS'],
 		frameworks: ['jasmine'],
 		files: [
 			'bower_components/jquery/dist/jquery.min.js',

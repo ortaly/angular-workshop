@@ -1,11 +1,12 @@
 describe('AppCtrl', function(){
-  var scope, ctrl, httpBackend, url, mockData, rootScope, YoutubeSearchSrv;
+  var scope, ctrl, httpBackend, url, mockData, rootScope, YoutubeSearchSrv,$q;
 
   beforeEach(module("mediaDeck"));
 
   beforeEach(
     inject(
-      function($controller, $rootScope, YoutubeSearch, preset, $httpBackend) {
+      function($controller, $rootScope, YoutubeSearch, preset, $httpBackend, _$q_) {
+        $q = _$q_;
         rootScope = $rootScope;
         YoutubeSearchSrv = YoutubeSearch;
         httpBackend = $httpBackend;
