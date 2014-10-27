@@ -11,7 +11,9 @@ angular.module('ui.controls')
 			onSelect: '&'
 		},
 		link: function (scope, element, attrs) {
+			scope.activeIndex = 0;
 			scope.handleClick = function (item, $index) {
+				scope.activeIndex = $index;
 				scope.onSelect({
 					item: item,
 					index: $index

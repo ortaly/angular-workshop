@@ -11413,8 +11413,7 @@ button.close {
 /* line 63, /Users/farhioren/Documents/Github/echoes/src/css/core/global.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/echoes\/src\/css\/core\/global\.less}line{font-family:\0000363}}
 .card .back {
-  -webkit-transform: perspective(400px) rotateY(-179.9deg);
-  transform: perspective(400px) rotateY(-179.9deg);
+  transform: perspective(400px) rotateY(-180deg);
 }
 /*.card:hover .face.back, .card:focus .face.back
 {
@@ -11430,13 +11429,11 @@ button.close {
 /* line 80, /Users/farhioren/Documents/Github/echoes/src/css/core/global.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/echoes\/src\/css\/core\/global\.less}line{font-family:\0000380}}
 .show-description .face.front {
-  -webkit-transform: perspective(400px) rotateY(179.9deg);
-  transform: perspective(400px) rotateY(179.9deg);
+  transform: perspective(400px) rotateY(180deg);
 }
 /* line 84, /Users/farhioren/Documents/Github/echoes/src/css/core/global.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/echoes\/src\/css\/core\/global\.less}line{font-family:\0000384}}
 .show-description .face.back {
-  -webkit-transform: perspective(400px) rotateY(0deg);
   transform: perspective(400px) rotateY(0deg);
 }
 /* line 88, /Users/farhioren/Documents/Github/echoes/src/css/core/global.less */
