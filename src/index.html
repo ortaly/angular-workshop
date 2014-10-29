@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app>
 <head>
 	<meta charset="utf-8">
 
@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-controller="AppCtrl">
 	<!-- TOP NAVIGATION BAR -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
@@ -35,70 +35,52 @@
 			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<!-- SEARCH -->
-				<form class="navbar-form navbar-left" id="media-search">
-					<input placeholder="Find In Youtube..." id="media-search" type="search" class="form-control">
+				<form class="navbar-form navbar-left" id="media-search" ng-submit="searchYoutube()">
+					<input ng-model="query" placeholder="Find In Youtube..." id="media-search" type="search" class="form-control">
 					<button type="submit" class="btn btn-default">
-						<i class="glyphicon glyphicon-search"></i> Find
+						<i class="glyphicon glyphicon-search"></i>
 					</button>
 				</form>
 
 				<div class="nav-collapse">
 					
-					<ul id="feed-filter" class="nav navbar-nav">
-				        <li>
-				        	<a href="#"><i class="glyphicon glyphicon-film"></i> Videos</a>
+					<ul id="feed-filter" class="nav navbar-nav" ng-controller="FeedCtrl">
+						<li ng-repeat="feed in data.items">
+				        	<a href="#" ng-click="setFeed(feed)"><i class="glyphicon {{feed.class}}"></i> {{feed.label}}</a>
 				        </li>
-				        
-				        <li>
-				        	<a href="#"><i class="glyphicon glyphicon-th-list"></i> Playlists</a>
-				        </li>
+
 					</ul>
 					
-					<ul class="navbar-nav nav" id="search-presets">
+					<ul class="navbar-nav nav" id="search-presets" ng-controller="PresetCtrl">
 						<li class="dropdown">
+
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="glyphicon glyphicon-tag"></i> Preset
+								<i class="glyphicon glyphicon-tag"></i> {{data.label}}
 								<span class="caret"></span>
 							</a>
 
 
 							<ul class="dropdown-menu">
 								
-								<li class="active">
-									<a href="#" data-preset="1">
-										All
-									</a>
-								</li><li class="">
-									<a href="#full album" data-preset="2">
-										Albums
-									</a>
-								</li><li class="">
-									<a href="#live" data-preset="3">
-										Live
+								<li ng-repeat="item in data.items">
+									<a href="#" data-preset="{{$index}}" ng-click="$parent.preset = item">
+										{{item}}
 									</a>
 								</li>
+
 							</ul>
 						</li>
 					</ul>
 					
-					<ul class="navbar-nav nav" id="duration-picker">
+					<ul class="navbar-nav nav" id="duration-picker" ng-controller="DurationCtrl">
 						<li class="dropdown">	
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="glyphicon glyphicon-time"></i> Duration
+								<i class="glyphicon glyphicon-time"></i> {{data.label}}
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li class="active">
-									<a href="#any" data-duration="0">Any</a>
-								</li>
-								<li class="">
-									<a href="#short" data-duration="1">Short (less then 4 minutes)</a>
-								</li>
-								<li class="">
-									<a href="#medium" data-duration="2">Medium (4-20 minutes)</a>
-								</li>
-								<li class="">
-									<a href="#long" data-duration="3">Long (longer than 20 minutes)</a>
+								<li class="" ng-repeat="item in data.items">
+									<a href="#any" data-duration="{{$index}}" ng-click="$parent.duration = item.value">{{item.label}}</a>
 								</li>
 							</ul>
 						</li>
@@ -138,7 +120,39 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<div id="search-results"></div>
+				<div id="search-results">
+					<br>
+					{{results}}
+
+					<!-- 
+						remove comment for the html below
+						to see ng-repeat in action
+						NOTE: tweak apps so $http service is called
+					 -->
+				
+					<div class="row">
+							<!-- ng-class="getMediaType(video)"> -->
+							<!-- ng-show="video.id.kind === 'youtube#video'" -->
+						<div ng-repeat="video in videos" class="col-sm-6 col-md-4" 
+							ng-class="{ 'video-item': isVideoItem(video), 'channel-item': isChannelItem(video) }">
+							<div class="thumbnail">
+								<div class="pull-left">
+									{{$index}}
+									<img ng-src="{{video.snippet.thumbnails.default.url}}" alt="{{video.snippet.title}}">
+								</div>
+								<div class="caption pull">
+									<h3>{{video.snippet.title}}</h3>
+									<p>{{video.snippet.description}}
+									</p>
+									<aside class="label label-primary">
+										<i class="fa" ng-class="{ 'fa-film': isVideoItem(video), 'fa-youtube-play': isChannelItem(video)}"></i>
+									</aside>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
 			</div>
 		</div>
 
@@ -185,7 +199,7 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-	
+
 	<!-- APP FILES -->
 	<script type="text/javascript" src="app/app.js"></script>
 </body>
